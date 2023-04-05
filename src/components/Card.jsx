@@ -1,8 +1,14 @@
+import { NavLink } from "react-router-dom";
+
 export default function Card({onClose, name, status, species, gender, origin, image, id}) {
    return (
       <div>
          <button onClick={() => onClose(id)}>X</button>
-         <h2>Name: {name}</h2>
+
+         <NavLink to={`/detail/${id}`}>
+            <h2>Name: {name}</h2>
+         </NavLink>
+
          <h2>Status: {status}</h2>
          <h2>Species: {species}</h2>
          <h2>Gender: {gender}</h2>
