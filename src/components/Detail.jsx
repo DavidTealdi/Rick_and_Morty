@@ -2,8 +2,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const API_KEY = 'https://be-a-rym.up.railway.app/api/character';
-const URL_BASE = '';
+const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
+const API_KEY = 'f1f9dcf5ae3d.3333700bff60b938aec9';
 
 const Detail = () => {
     const { id } = useParams();
