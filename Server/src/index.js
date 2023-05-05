@@ -1,6 +1,7 @@
 const express = require('express');
 const server = express();
 const router = require('./routes/index')
+const { conn } = require("./DB_connection");
 
 const PORT = 3001;
 
@@ -24,6 +25,7 @@ server.use((req, res, next) => {
 // middleware
 server.use('/rickandmorty', router)
 
-server.listen(PORT, () => {
+server.listen(PORT, async () => {
+    await conn.sync({ force: true });
     console.log('Server raised in port: ' + PORT)
 })
